@@ -1,12 +1,10 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Star, Phone, Mail, MapPin, Users, Heart, Target, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import heroChild from '@/assets/hero-child.jpg';
-import therapyChild from '@/assets/therapy-child.jpg';
-import childrenTogether from '@/assets/children-together.jpg';
 
 const Index = () => {
   return (
@@ -29,14 +27,17 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="bg-gradient-to-br from-hero-bg via-hero-secondary/20 to-primary/10 py-20">
-          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold text-foreground mb-6">
+      <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg via-hero-secondary/20 to-primary/10">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <Badge className="bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-full">
+                Let's Get Started! CONTACT US
+              </Badge>
+              <h1 className="text-5xl font-bold text-foreground leading-tight">
                 Let's Bring Out the <span className="text-primary">Star</span> in Your Child!
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground">
                 Compassionate, Personalized ABA Therapy for Children with Autism
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -50,9 +51,9 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src={heroChild} 
+                src="/lovable-uploads/be2c3d2c-4db1-4e88-b412-e664e33a0403.png"
                 alt="Happy child playing with educational toys" 
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl w-full"
               />
               <div className="absolute -top-4 -right-4 bg-yellow text-yellow-foreground p-4 rounded-full">
                 <Star className="h-8 w-8" />
@@ -62,23 +63,23 @@ const Index = () => {
         </div>
 
         {/* Contact Form Overlay */}
-        <div className="absolute top-8 right-8 bg-background/95 backdrop-blur-sm p-6 rounded-lg shadow-lg border max-w-sm">
-          <div className="bg-primary text-primary-foreground px-4 py-2 rounded-t-lg -m-6 mb-4">
+        <div className="absolute top-20 right-8 bg-background/95 backdrop-blur-sm rounded-2xl shadow-2xl border max-w-sm z-10">
+          <div className="bg-coral text-coral-foreground px-6 py-3 rounded-t-2xl">
             <h3 className="font-bold text-center">Let's Get Started! CONTACT US</h3>
           </div>
-          <div className="space-y-4">
-            <div className="text-center">
+          <div className="p-6 space-y-4">
+            <div className="text-center space-y-1">
               <p className="text-sm font-medium">No Waitlist.</p>
               <p className="text-sm font-medium">Immediate Access to Care.</p>
             </div>
             <div className="space-y-3">
-              <Input placeholder="Name" />
-              <Input placeholder="Phone" />
-              <Input placeholder="Email" />
-              <Input placeholder="Your Message" />
+              <Input placeholder="Name" className="border-gray-300" />
+              <Input placeholder="Phone" className="border-gray-300" />
+              <Input placeholder="Email" className="border-gray-300" />
+              <Input placeholder="Your Message" className="border-gray-300" />
             </div>
             <Button className="w-full bg-coral text-coral-foreground hover:bg-coral/90">
-              Get Started
+              GET STARTED
             </Button>
           </div>
         </div>
@@ -90,9 +91,9 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src={therapyChild} 
+                src="/lovable-uploads/71731c23-4b10-424a-b6d4-a8c7dab69130.png"
                 alt="Child in therapy session" 
-                className="rounded-full w-64 h-64 object-cover mx-auto"
+                className="rounded-full w-80 h-80 object-cover mx-auto shadow-xl"
               />
             </div>
             <div>
@@ -100,7 +101,7 @@ const Index = () => {
                 At StarRise ABA Therapy, we believe every child has a star inside them—waiting to shine.
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
-                We know that as a parent, you're at that challenging, that's why we bring our mission a complete bundle of growth and development.
+                We know that as a parent, you're at that challenging point where you need support, that's why we bring our mission a complete bundle of growth and development.
               </p>
               <p className="text-lg text-muted-foreground">
                 Our mission is simple: to help every child discover their strengths, build true confidence, and achieve meaningful progress.
@@ -117,7 +118,7 @@ const Index = () => {
             Our Services: Helping Your Child Shine Brighter Every Day
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-secondary text-secondary-foreground">
+            <Card className="bg-secondary text-secondary-foreground hover:shadow-lg transition-shadow">
               <CardContent className="p-8 text-center">
                 <div className="bg-background/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Target className="h-8 w-8" />
@@ -129,7 +130,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-secondary text-secondary-foreground">
+            <Card className="bg-secondary text-secondary-foreground hover:shadow-lg transition-shadow">
               <CardContent className="p-8 text-center">
                 <div className="bg-background/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-8 w-8" />
@@ -141,7 +142,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-secondary text-secondary-foreground">
+            <Card className="bg-secondary text-secondary-foreground hover:shadow-lg transition-shadow">
               <CardContent className="p-8 text-center">
                 <div className="bg-background/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Heart className="h-8 w-8" />
@@ -157,9 +158,9 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-coral text-coral-foreground">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">GET STARTED TODAY – NO WAITLIST!</h2>
+      <section className="py-8 bg-coral text-coral-foreground">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
+          <h2 className="text-2xl font-bold">GET STARTED TODAY – NO WAITLIST!</h2>
           <Button size="lg" variant="outline" className="border-coral-foreground text-coral-foreground hover:bg-coral-foreground hover:text-coral">
             GET STARTED
           </Button>
@@ -173,9 +174,13 @@ const Index = () => {
             Why Families Choose StarRise ABA Therapy
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
+            <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <img src="/api/placeholder/200/150" alt="No Waitlist" className="w-full h-32 object-cover rounded mb-4" />
+                <img 
+                  src="/lovable-uploads/d552b6f2-796e-491a-8bff-494aab9f4083.png" 
+                  alt="No Waitlist" 
+                  className="w-full h-32 object-cover rounded mb-4" 
+                />
                 <h3 className="font-bold mb-2">No Waitlist</h3>
                 <p className="text-sm text-muted-foreground">
                   Start getting services right away. No waiting or delays.
@@ -183,9 +188,13 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <img src="/api/placeholder/200/150" alt="Experienced Team" className="w-full h-32 object-cover rounded mb-4" />
+                <img 
+                  src="/lovable-uploads/0453cd77-4759-4d07-a0db-5726dda7eae2.png" 
+                  alt="Experienced Team" 
+                  className="w-full h-32 object-cover rounded mb-4" 
+                />
                 <h3 className="font-bold mb-2">Experienced Team</h3>
                 <p className="text-sm text-muted-foreground">
                   Our certified ABA therapists are dedicated to helping your child succeed.
@@ -193,9 +202,13 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <img src="/api/placeholder/200/150" alt="In-Home ABA Therapy" className="w-full h-32 object-cover rounded mb-4" />
+                <img 
+                  src="/lovable-uploads/eea30266-10fd-4f54-84c9-32c241e325bb.png" 
+                  alt="In-Home ABA Therapy" 
+                  className="w-full h-32 object-cover rounded mb-4" 
+                />
                 <h3 className="font-bold mb-2">In-Home ABA Therapy</h3>
                 <p className="text-sm text-muted-foreground">
                   Therapy delivered in your child's natural environment for maximum comfort.
@@ -203,9 +216,13 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <img src="/api/placeholder/200/150" alt="Family-Focused Approach" className="w-full h-32 object-cover rounded mb-4" />
+                <img 
+                  src="/lovable-uploads/f31bcc2a-2dfb-4608-a7da-8f7535ef6ce7.png" 
+                  alt="Family-Focused Approach" 
+                  className="w-full h-32 object-cover rounded mb-4" 
+                />
                 <h3 className="font-bold mb-2">Family-Focused Approach</h3>
                 <p className="text-sm text-muted-foreground">
                   We work with your family to create lasting positive changes.
@@ -226,7 +243,7 @@ const Index = () => {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     1
                   </div>
                   <div>
@@ -237,7 +254,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     2
                   </div>
                   <div>
@@ -248,7 +265,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     3
                   </div>
                   <div>
@@ -259,7 +276,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     4
                   </div>
                   <div>
@@ -270,7 +287,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                  <div className="bg-coral text-coral-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                     5
                   </div>
                   <div>
@@ -284,9 +301,9 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src={childrenTogether} 
+                src="/lovable-uploads/64208fd1-d9d3-4618-a567-c7ce033bd64e.png"
                 alt="Children supporting each other" 
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
           </div>
@@ -320,9 +337,9 @@ const Index = () => {
       </section>
 
       {/* Service Area */}
-      <section className="py-12 bg-coral text-coral-foreground">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold mb-4">Serving North Carolina & Surrounding Areas</h2>
+      <section className="py-8 bg-coral text-coral-foreground">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
+          <h2 className="text-2xl font-bold">Serving North Carolina & Surrounding Areas</h2>
           <Button size="lg" variant="outline" className="border-coral-foreground text-coral-foreground hover:bg-coral-foreground hover:text-coral">
             GET STARTED
           </Button>
@@ -336,7 +353,7 @@ const Index = () => {
             What Families Are Saying About StarRise ABA Therapy
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-background/90">
+            <Card className="bg-background/90 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   <div className="bg-yellow rounded-full w-12 h-12 flex items-center justify-center">
@@ -350,7 +367,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-background/90">
+            <Card className="bg-background/90 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   <div className="bg-yellow rounded-full w-12 h-12 flex items-center justify-center">
@@ -368,9 +385,9 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-coral text-coral-foreground">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">SCHEDULE YOUR CONSULTATION</h2>
+      <section className="py-12 bg-coral text-coral-foreground">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
+          <h2 className="text-3xl font-bold">SCHEDULE YOUR CONSULTATION</h2>
           <Button size="lg" variant="outline" className="border-coral-foreground text-coral-foreground hover:bg-coral-foreground hover:text-coral">
             GET STARTED
           </Button>
