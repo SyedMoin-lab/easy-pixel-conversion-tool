@@ -14,24 +14,24 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-yellow">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-yellow-foreground mb-12">
+    <section className="py-12 md:py-16 bg-yellow relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-yellow-foreground mb-8 md:mb-12">
           What Families Are Saying About StarRise ABA Therapy
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-background/90 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow rounded-full w-12 h-12 flex items-center justify-center">
-                    <Star className="h-6 w-6 text-yellow-foreground" />
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="bg-yellow rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                    <Star className="h-5 w-5 md:h-6 md:w-6 text-yellow-foreground" />
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-4 italic">
+                <p className="text-muted-foreground mb-3 md:mb-4 italic text-sm md:text-base">
                   "{testimonial.text}"
                 </p>
-                <p className="font-bold">{testimonial.author}</p>
+                <p className="font-bold text-sm md:text-base">{testimonial.author}</p>
               </CardContent>
             </Card>
           ))}
