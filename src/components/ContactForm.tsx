@@ -1,26 +1,63 @@
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-
 const ContactForm = () => {
   return (
-    <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-white rounded-2xl shadow-2xl border max-w-xs md:max-w-sm z-20">
-      <div className="bg-primary text-primary-foreground px-4 py-2 md:px-6 md:py-3 rounded-t-2xl">
-        <h3 className="font-bold text-center text-sm md:text-base">Let's Get Started! CONTACT US</h3>
+    <div className="absolute top-8 right-8 bg-white rounded-3xl shadow-xl max-w-sm z-20 overflow-hidden">
+      {/* Header with cyan background */}
+      <div className="bg-cyan-400 text-black px-6 py-4 text-center">
+        <h3 className="font-bold text-base">Let's Get Started! <span className="bg-yellow-400 px-2 py-1 rounded text-sm ml-2">CONTACT US</span></h3>
       </div>
-      <div className="p-4 md:p-6 space-y-3 md:space-y-4">
-        <div className="text-center space-y-1">
-          <p className="text-xs md:text-sm font-medium text-foreground">No Waitlist.</p>
-          <p className="text-xs md:text-sm font-medium text-foreground">Immediate Access to Care.</p>
+      
+      {/* Pink section */}
+      <div className="bg-pink-300 text-center py-4 px-6">
+        <p className="font-semibold text-black">No Waitlist.</p>
+        <p className="font-semibold text-black">Immediate Access to Care.</p>
+      </div>
+      
+      {/* Form section */}
+      <div className="p-6 space-y-4">
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">👤</span>
+          <input 
+            type="text" 
+            placeholder="Name" 
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
         </div>
-        <div className="space-y-2 md:space-y-3">
-          <Input placeholder="Name" className="border-input text-sm" />
-          <Input placeholder="Phone" className="border-input text-sm" />
-          <Input placeholder="Email" className="border-input text-sm" />
-          <Input placeholder="Your Message" className="border-input text-sm" />
+        
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">📞</span>
+          <input 
+            type="text" 
+            placeholder="Phone no" 
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
         </div>
-        <Button className="w-full bg-coral text-coral-foreground hover:bg-coral/90 text-sm md:text-base">
+        
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">✉️</span>
+          <input 
+            type="email" 
+            placeholder="Email Id" 
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">🎂</span>
+          <input 
+            type="text" 
+            placeholder="Your child's age" 
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        
+        <div className="flex items-start space-x-2">
+          <input type="checkbox" className="mt-1" />
+          <label className="text-sm text-gray-600">I agree to be contacted by StarRise ABA Therapy</label>
+        </div>
+        
+        <button className="w-full bg-red-500 text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
           GET STARTED
-        </Button>
+        </button>
       </div>
     </div>
   );

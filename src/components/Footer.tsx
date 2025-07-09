@@ -1,49 +1,24 @@
-import { Star, Phone, Mail, MapPin } from 'lucide-react';
-
 const Footer = () => {
   return (
-    <footer className="bg-navy text-white py-12">
+    <footer className="bg-blue-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <Star className="h-6 w-6" />
-              <span className="text-xl font-bold">StarRise</span>
+        <div className="text-center">
+          <p className="text-lg mb-4">
+            StarRise ABA Therapy proudly provides in-home ABA therapy to families in North Carolina and nearby communities. Wherever you are, we're here to help your child shine.
+          </p>
+          <div className="flex items-center justify-center space-x-3 mb-8">
+            <div className="relative w-8 h-8">
+              <svg viewBox="0 0 24 24" className="w-full h-full">
+                <path d="M12 2L14 8L20 8L15.5 12L17 18L12 15L7 18L8.5 12L4 8L10 8Z" fill="#FF6B6B" />
+                <path d="M12 2L10 8L4 8L8.5 12L7 18L12 15L17 18L15.5 12L20 8L14 8Z" fill="#4ECDC4" />
+                <path d="M12 2L12 15" stroke="#FFE66D" strokeWidth="1.5" />
+              </svg>
             </div>
-            <p className="text-sm text-gray-300">
-              StarRise ABA Therapy proudly serves North Carolina. ABA therapy for families in North Carolina and nearby communities.
-            </p>
+            <span className="text-2xl font-bold">StarRise ABA Therapy</span>
           </div>
-          <div>
-            <h3 className="font-bold mb-4">Contact Info</h3>
-            <div className="space-y-2 text-sm text-gray-300">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>info@starrise-aba.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>North Carolina</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>ABA Therapy</li>
-              <li>Behavior Support</li>
-              <li>Communication Development</li>
-              <li>Social Skills Training</li>
-              <li>Family Support</li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>&copy; 2024 StarRise ABA Therapy. All rights reserved.</p>
+          <p className="text-center text-blue-300">
+            StarRise ABA Therapy is dedicated to helping your child shine, grow, and share through compassionate, personalized care. Contact us today to start their journey towards a brighter future.
+          </p>
         </div>
       </div>
     </footer>
